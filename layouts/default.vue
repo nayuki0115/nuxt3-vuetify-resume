@@ -6,6 +6,7 @@
           class="me-4 "
           color="grey-darken-1"
           size="32"
+          image="@/assets/images/avatar.jpg"
         ></v-avatar>
 
         <v-app-bar-title >Annie Wu</v-app-bar-title>
