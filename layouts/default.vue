@@ -47,6 +47,7 @@
 <script setup lang="ts">
 const route = useRoute()
 useHead({
+  title: `Annie Wu Resume`,
   meta: [
     { property: 'title', content: `Annie Wu Resume` },
     { property: 'og:title', content: `Annie Wu Resume` }
