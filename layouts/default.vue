@@ -82,8 +82,4 @@ const handleLinks = (link: string) => {
   }
 }
 </script>
-<style lang="scss" scoped>
-.v-sheet {
-  padding: 0 1rem 0 1rem;
-}
-</style>
+
