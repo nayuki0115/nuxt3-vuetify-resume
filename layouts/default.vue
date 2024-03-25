@@ -29,11 +29,7 @@
       <v-container>
         <v-row>
           <v-col>
-            <v-sheet
-              min-height="70vh"
-              rounded="lg"
-              :elevation="3"
-            >
+            <v-sheet rounded="lg" :elevation="3" >
             <slot />
             </v-sheet>
           </v-col>

@@ -13,13 +13,16 @@
     </v-img>
 
     <v-card-subtitle class="pt-4">
-      Number 10
+      {{ `${introductionGroup.cJob} ${introductionGroup.eJob}` }}
     </v-card-subtitle>
 
     <v-card-text>
-      <div>Whitehaven Beach</div>
+      <div>{{ introductionGroup.email }}</div>
+      <div><v-icon :icon="'mdi-map-marker'"></v-icon> {{ introductionGroup.locate }}</div>
+    </v-card-text>
 
-      <div>Whitsunday Island, Whitsunday Islands</div>
+    <v-card-text class="text">
+
     </v-card-text>
 
     <v-card-actions>
@@ -37,11 +40,19 @@
 <script setup lang="ts">
 interface introductionItem {
   cName: string;
-  eName: string
+  eName: string;
+  cJob: string;
+  eJob: string;
+  email: string;
+  locate: string;
 }
 const introductionGroup:introductionItem  = {
   cName: '吳冠儀',
-  eName: 'Annie Wu'
+  eName: 'Annie Wu',
+  cJob: '前端工程師',
+  eJob: 'Frontend Engineer',
+  email: 'annie25506@gmail.com',
+  locate: 'Taipei, Taiwan'
 }
 
 </script>
