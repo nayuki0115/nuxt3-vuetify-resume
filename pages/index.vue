@@ -29,9 +29,9 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-btn variant="outlined" color="orange" @click="resumeWeb('Linkedin')" prepend-icon="mdi-linkedin">Linkedin</v-btn>
-      <v-btn variant="outlined" color="orange" @click="resumeWeb('Github')" prepend-icon="mdi-github">Github</v-btn>
-      <v-btn variant="outlined" color="orange" @click="resumeWeb('CakeResume')" prepend-icon="mdi-file-account">CakeResume</v-btn>
+      <v-btn variant="outlined" color="primary" @click="resumeWeb('Linkedin')" prepend-icon="mdi-linkedin">Linkedin</v-btn>
+      <v-btn variant="outlined" color="black" @click="resumeWeb('Github')" prepend-icon="mdi-github">Github</v-btn>
+      <v-btn variant="outlined" color="green-darken-3" @click="resumeWeb('CakeResume')" prepend-icon="mdi-file-account">CakeResume</v-btn>
     </v-card-actions>
 
 
@@ -77,14 +77,6 @@ const resumeWeb = async(webType: string) => {
     target: '_blank',
   }
 })
-  // switch (key) {
-  //   case value:
-      
-  //     break;
-  
-  //   default:
-  //     break;
-  // }
 }
 
 
