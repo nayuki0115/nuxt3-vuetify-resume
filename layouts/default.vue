@@ -54,7 +54,6 @@ const links: string[] = [
   'Introduction',
   'Skill',
   'Work Experience',
-  'Book Club'
 ]
 
 const router = useRouter()

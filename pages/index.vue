@@ -34,6 +34,48 @@
       <v-btn variant="outlined" color="green-darken-3" @click="resumeWeb('CakeResume')" prepend-icon="mdi-file-account">CakeResume</v-btn>
     </v-card-actions>
 
+    <v-card-subtitle class="pt-4 text-h6">學歷</v-card-subtitle>
+    <v-timeline side="end" direction="horizontal">
+      <v-timeline-item
+        v-for="(item, index) in introductionGroup.educational"
+        :key="index"
+        :dot-color="item.color"
+        size="small"
+        min-width="30vw"
+      >
+        <v-alert
+          :color="item.color"
+          :value="true"
+        >
+          <div>{{ item.year }}</div>
+          <div>{{ item.school }}</div>
+          <div>{{ item.department }}</div>  
+        
+        </v-alert>
+      </v-timeline-item>
+    </v-timeline>
+
+    <v-card-subtitle class="pt-4 text-h6">工作經歷</v-card-subtitle>
+    <v-timeline side="end" direction="horizontal">
+      <v-timeline-item
+        v-for="(workItem, workIndex) in introductionGroup.work"
+        :key="workIndex"
+        :dot-color="workItem.color"
+        size="small"
+        min-width="30vw"
+      >
+        <v-alert
+          :color="workItem.color"
+          :value="true"
+        >
+          <div>{{ workItem.year }}</div>
+          <div>{{ workItem.title }}</div>
+          <div>{{ workItem.company }}</div>  
+        </v-alert>
+      </v-timeline-item>
+    </v-timeline>
+
+    <br/>
 
   </v-card>
 </template>
@@ -46,6 +88,8 @@ interface introductionItem {
   eJob: string;
   email: string;
   locate: string;
+  educational: {color: string; icon?: string; year: string; school: string, department: string}[];
+  work: { color: string; title: string; company: string; year: string; description: string[]}[]
 }
 const introductionGroup:introductionItem  = {
   cName: '吳冠儀',
@@ -53,7 +97,17 @@ const introductionGroup:introductionItem  = {
   cJob: '前端工程師',
   eJob: 'Frontend Engineer',
   email: 'annie25506@gmail.com',
-  locate: 'Taipei, Taiwan'
+  locate: 'Taipei, Taiwan',
+  educational: [
+    {color: 'light-blue-lighten-5', year: '2015 - 2017', school: '國立臺北科技大學', department: '資訊與財金管理系 碩士班'},
+    {color: 'light-blue-lighten-5', year: '2011 - 2015', school: '實踐大學', department: '資訊科技與管理學系 '}
+  ],
+  work: [
+    {
+      color: 'light-blue-lighten-5', title: '前端工程師(主任)',  company:'藍星球資訊股份有限公司', year: '十月 2017 - Present', 
+      description: ['2017/10 擔任 前端工程師', '2019/01 升為 高級前端工程師', '2022/10 升為 主任']
+    }
+  ]
 }
 
 const resumeWeb = async(webType: string) => {
@@ -73,12 +127,11 @@ const resumeWeb = async(webType: string) => {
       break;
   }
   await navigateTo(url, {
-  open: {
-    target: '_blank',
-  }
-})
+    open: {
+      target: '_blank',
+    }
+  })
 }
-
 
 </script>
 
