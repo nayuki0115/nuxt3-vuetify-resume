@@ -29,11 +29,7 @@
       <v-container>
         <v-row>
           <v-col>
-            <v-sheet
-              min-height="70vh"
-              rounded="lg"
-              :elevation="3"
-            >
+            <v-sheet rounded="lg" :elevation="3" >
             <slot />
             </v-sheet>
           </v-col>
@@ -58,7 +54,6 @@ const links: string[] = [
   'Introduction',
   'Skill',
   'Work Experience',
-  'Book Club'
 ]
 
 const router = useRouter()
@@ -82,8 +77,4 @@ const handleLinks = (link: string) => {
   }
 }
 </script>
-<style lang="scss" scoped>
-.v-sheet {
-  padding: 0 1rem 0 1rem;
-}
-</style>
+
