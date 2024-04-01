@@ -19,7 +19,7 @@
 ## Demo
 想試著用看看 codesandbox，所以連結了 github 帳戶，並且將此 repo demo 出來  
 
-demo page:  https://n49knj-3000.csb.app/  
+demo page:  https://qm4rtk-3000.csb.app/  
 
 如果上列網址不能看的時候：  
 請進入 https://codesandbox.io/p/github/nayuki0115/Nuxt3VuetifyResume/main  
