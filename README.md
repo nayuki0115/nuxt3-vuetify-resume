@@ -1,5 +1,6 @@
 # Nuxt3 Vuetify Resume
 
+![image](https://img.shields.io/badge/node-v20.11.1-green.svg) 
 
 ## 說明
 
