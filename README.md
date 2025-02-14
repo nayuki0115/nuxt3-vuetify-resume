@@ -20,7 +20,7 @@
 ## Demo
 想試著用看看 codesandbox，所以連結了 github 帳戶，並且將此 repo demo 出來  
 
-請進入 https://codesandbox.io/p/github/nayuki0115/Nuxt3VuetifyResume/main  
+請進入 https://codesandbox.io/p/github/nayuki0115/nuxt3-vuetify-resume/main
 
 <img src="/assets/images/demo_step.png" >  
 
